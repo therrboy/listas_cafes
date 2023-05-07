@@ -1,0 +1,29 @@
+{% extends 'bootstrap4/base.html' %}
+{% block title %}Restaurants{% endblock %}
+{% block head %}
+        <link href="../static/css/styles.css" rel="stylesheet" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% endblock %}
+{% block content %}
+
+<div class="container">
+      <h1 id="h1_cafes_and_add">All Cafes</h1>
+        <table class="table">
+                    {% for cafe in cafes %}
+                        <td><hr id="lineas_cafes" class="my-4"></td>
+                        <tr>
+                        {% for data in cafe %}
+                            {% if "http" in data %}
+                                <td class="word-cell"><a href="{{ cafe[1] }}">map ubication</a></td>
+                            {% else %}
+                                 <td class="word-cell">{{ data }}</td>
+                            {% endif %}
+                        {% endfor %}
+                        </tr>
+                    {% endfor %}
+        </table>
+      <p id="index_and_cafes"><a href="{{ url_for('home') }}">Return to index page</a></p>
+</div>
+
+{% endblock %}

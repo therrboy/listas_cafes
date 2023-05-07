@@ -1,0 +1,103 @@
+
+body {
+    background-color: #333;
+    color: white;
+}
+
+a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  color: white;
+  background-color: #333;
+}
+
+.space-above {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+h1{
+    font-size: 5rem;
+    text-align: center;
+    font-family: "Franklin Gothic Heavy", serif;
+    margin-bottom: 0.2em;
+}
+#h1_cafes_and_add{
+    font-size:3rem !important;
+    font-family: "Franklin Gothic", serif;
+    text-align: justify;
+    padding:0 5%;
+}
+p{
+    font-family: "Franklin Gothic Book", serif;
+    font-size: 1.7rem;
+}
+
+#index_and_cafes{
+    text-align:left;
+    padding: 0 0 0 4%;
+}
+
+#lineas_cafes{
+    width:650%;
+    margin-left:30%;
+}
+
+.word-cell {
+    font-size: 1rem;
+    font-family: "Franklin Gothic", serif;
+    padding-left:5%;
+    width: 5%;
+    text-align: left;
+}
+.container{
+    text-align:center;
+    margin:0 auto;
+}
+.button {
+  background: #edc628;
+  background-image: -webkit-linear-gradient(top, #edc628, #edc628);
+  background-image: -moz-linear-gradient(top, #edc628, #edc628);
+  background-image: -ms-linear-gradient(top, #edc628, #edc628);
+  background-image: -o-linear-gradient(top, #edc628, #edc628);
+  background-image: linear-gradient(to bottom, #edc628, #edc628);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  font-family: Arial, serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.options input[type="text"], .options select {
+  width: 50%;
+  box-sizing: border-box;
+  padding:10px;
+  margin: 5px 0;
+  border-radius: 7px;
+  text-align: justify;
+}
+
+.varias_opciones{
+    padding: 0 0 0 4%;
+}
+
+label{
+    font-family: "Franklin Gothic Book", serif;
+    font-size: 1.7rem;
+}
+
+#submit {
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px;
+  font-size:20px;
+}

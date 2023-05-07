@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% block head %}
+		<title>{% block title %}Mi sitio web{% endblock %}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{ url_for('static', filename='"../static/css/styles.css"') }}">
+	{% endblock %}
+</head>
+<body>
+	{% block content %}
+		<h1>Bienvenido a mi sitio web</h1>
+	{% endblock %}
+
+	{% block scripts %}
+		<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+	{% endblock %}
+</body>
+</html>

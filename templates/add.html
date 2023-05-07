@@ -1,0 +1,99 @@
+{% extends 'bootstrap4/base.html' %}
+{% import "bootstrap4/wtf.html" as wtf %}
+
+{% block title %}Add A New Cafe{% endblock %}
+{% block head %}
+        <link href="../static/css/styles.css" rel="stylesheet" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% endblock %}
+{% block content %}
+
+<div class="container-add">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <h1 id="h1_cafes_and_add">Add a new café into the database</h1>
+            <form class="varias_opciones" method="POST" action="{{ url_for('add_cafe') }}" autocomplete="off">
+
+              <div class="options">
+                  {{ form.cafeName.label }}<br>
+                  {{ form.cafeName() }}<br>
+                  {{ form.csrf_token }}
+                  {% for error in form.cafeName.errors %}
+                    <span style="color: red;">{{ error }}</span><br>
+                  {% endfor %}
+              </div>
+
+              <div class="options">
+                  {{ form.cafeLocation.label }}<br>
+                  {{ form.cafeLocation() }}<br>
+                  {{ form.csrf_token }}
+                  {% for error in form.cafeLocation.errors %}
+                    <span style="color: red;">{{ error }}</span><br>
+                  {% endfor %}
+              </div>
+              <div class="options">
+                  {{ form.cafeOpening.label }}<br>
+                  {{ form.cafeOpening() }}<br>
+                  {{ form.csrf_token }}
+                  {% for error in form.cafeOpening.errors %}
+                    <span style="color: red;">{{ error }}</span><br>
+                  {% endfor %}
+              </div>
+
+              <div class="options">
+                  {{ form.cafeClose.label }}<br>
+                  {{ form.cafeClose() }}<br>
+                  {{ form.csrf_token }}
+                  {% for error in form.cafeClose.errors %}
+                    <span style="color: red;">{{ error }}</span><br>
+                  {% endfor %}
+              </div>
+
+              <div class="options">
+                  {{ form.cafeRating.label }}<br>
+                  {{ form.csrf_token }}
+                  {% for error in form.cafeRating.errors %}
+                      <span style="color: red;">{{ error }}</span><br>
+                  {% endfor %}
+                  <select class="options" id="cafeRating" name="cafeRating">
+                      {% for choice in form.cafeRating.choices %}
+                          <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+                      {% endfor %}
+                  </select>
+              </div>
+
+              <div class="options">
+                  {{ form.cafeWifi.label }}<br>
+                  {{ form.csrf_token }}
+                  {% for error in form.cafeWifi.errors %}
+                      <span style="color: red;">{{ error }}</span><br>
+                  {% endfor %}
+                  <select class="options" id="cafeWifi" name="cafeWifi">
+                      {% for choice in form.cafeWifi.choices %}
+                          <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+                      {% endfor %}
+                  </select>
+              </div>
+
+              <div class="options">
+                  {{ form.cafePowerSocket.label }}<br>
+                  {{ form.csrf_token }}
+                  {% for error in form.cafePowerSocket.errors %}
+                        <span style="color: red;">{{ error }}</span><br>
+                  {% endfor %}
+                  <select class="options" id="cafePowerSocket" name="cafePowerSocket">
+                        {% for choice in form.cafePowerSocket.choices %}
+                            <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+                        {% endfor %}
+                  </select>
+              </div>
+
+            <p id="button">{{ form.submit }}</p>
+            <p class="index_and_cafes"><a href="{{ url_for('cafes') }}">See all cafes</a></p>
+            </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
